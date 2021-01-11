@@ -8,7 +8,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - deps-v2-{{ checksum "poetry.lock" }}
+            - deps-{{ checksum "poetry.lock" }}
 
       - run:
           name: Install Dependencies
@@ -17,7 +17,7 @@ jobs:
             poetry install
 
       - save_cache:
-          key: deps-v2-{{ checksum "poetry.lock" }}
+          key: deps-{{ checksum "poetry.lock" }}
           paths:
             - .
 
@@ -25,3 +25,4 @@ jobs:
           name: Exec Pytest
           command: |
             poetry run pytest
+            pytest
