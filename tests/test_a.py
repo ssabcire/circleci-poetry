@@ -1,4 +1,5 @@
-from src.a import b
+def b(a, b):
+    return a * b
 
 
 def test_b():
