@@ -27,4 +27,4 @@ jobs:
       - run:
           name: Exec Pytest
           command: |
-            pytest
+            poetry run pytest
