@@ -25,7 +25,7 @@ jobs:
           paths:
             - CACHE_PATH
 
-      # - run:
-      #     name: Exec Pytest
-      #     command: |
-      #       pytest
+      - run:
+          name: Exec Pytest
+          command: |
+            pytest
